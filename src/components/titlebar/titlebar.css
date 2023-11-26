@@ -1,0 +1,93 @@
+.titlebarContainer {
+  display: flex;
+  width: 100vw;
+  height: 40px;
+  justify-content: space-between;
+  color: #748eb0;
+}
+
+.titlebarMenuItems {
+  margin-left: 5px;
+}
+
+.titlebarContainer > * {
+  user-select: none;
+}
+
+.titlebarLeft {
+  display: flex;
+  align-items: center;
+  padding: 7px;
+}
+
+.menuItem-0 {
+  margin-left: 7px;
+  position: relative;
+}
+
+.menuItem-1 {
+  padding: 5px 7px;
+  cursor: pointer;
+}
+.menuItemTitle-0 {
+  padding: 7px 10px;
+  border-radius: 7px;
+}
+
+.subMenuItemContainer-0 {
+  /* position: absolute;
+  background-color: #00293d;
+  width: max-content;
+  color: #b7c2d1;
+  left: 0px;
+  border-radius: 7px; */
+  display: none;
+}
+
+.menuItem-0[aria-selected='true']:hover > .menuItemTitle-0 {
+  background-color: #001e45;
+  color: #b7c2d1;
+  cursor: pointer;
+}
+
+.menuItem-0[aria-selected='true']:hover > .subMenuItemContainer-0 {
+  position: absolute;
+  background-color: #00293d;
+  width: max-content;
+  color: #b7c2d1;
+  left: 0px;
+  border-radius: 7px;
+  display: block;
+}
+
+.menuItemTitle-0:hover {
+  background-color: #001e45;
+  color: #b7c2d1;
+  cursor: pointer;
+}
+
+.titlebarIcon {
+  width: 25px;
+  height: 25px;
+  user-select: none;
+}
+
+.titlebarRight {
+  display: flex;
+  align-items: end;
+}
+
+.titlebarMenuItems {
+  display: flex;
+}
+
+.windowControlButton {
+  padding: 10px;
+  display: flex;
+  align-items: last baseline;
+  cursor: pointer;
+  height: 100%;
+}
+.windowControlButton:hover {
+  background: #001e45;
+}

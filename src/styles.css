@@ -1,0 +1,29 @@
+#root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  padding: 0;
+  font-weight: 400;
+  overflow-x: hidden;
+  height: 100vh;
+  color: white;
+  background-color: #00141f;
+  margin: 0px;
+  border-radius: 15px;
+  /* border-radius: 2px solid white; */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
