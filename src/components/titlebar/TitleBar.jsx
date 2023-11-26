@@ -8,7 +8,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import './titlebar.css';
 
 function TitleBar() {
-  const [isMaximized, setIsMaximized] = useState(false);
+  const [isMaximized, setIsMaximized] = useState('false');
   const [clicked, setClicked] = useState('false');
 
   function getMenuItem(m, level) {
@@ -23,9 +23,7 @@ function TitleBar() {
               aria-selected={clicked}
               onClick={() => {
                 console.log('Clicked');
-                setClicked((prev) =>
-                  prev == 'true' ? 'false' : 'true'
-                );
+                setClicked('true');
               }}
             >
               <div className={'menuItemTitle-' + `${level}`}>
@@ -54,7 +52,10 @@ function TitleBar() {
     >
       <div className="titlebarLeft">
         <img src={Icon} className="titlebarIcon" alt="" />
-        <div className="titlebarMenuItems">
+        <div
+          className="titlebarMenuItems"
+          onMouseLeave={() => setClicked('false')}
+        >
           {getMenuItem(menu, 0)}
         </div>
       </div>
