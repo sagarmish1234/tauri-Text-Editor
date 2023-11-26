@@ -1,0 +1,10 @@
+#space {
+  width: 100vw;
+  min-height: calc(100vh - 40px);
+  height: max-content;
+}
+
+#space {
+    border: none;
+    outline: none;
+}

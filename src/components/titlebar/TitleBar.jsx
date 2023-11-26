@@ -6,9 +6,12 @@ import { FaWindowMinimize } from 'react-icons/fa6';
 import { FaRegWindowMaximize } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import './titlebar.css';
+import { FileUtil } from '../../util/fileUtil';
 
 function TitleBar() {
-  const [isMaximized, setIsMaximized] = useState('false');
+  const [isMaximized, setIsMaximized] = useState(
+    appWindow.isMaximized()
+  );
   const [clicked, setClicked] = useState('false');
 
   function getMenuItem(m, level) {
@@ -16,17 +19,20 @@ function TitleBar() {
 
     return (
       <>
-        {m.map((item) => {
+        {m.map((item, index) => {
           return (
             <div
               className={'menuItem-' + `${level}`}
               aria-selected={clicked}
+              key={index}
               onClick={() => {
-                console.log('Clicked');
                 setClicked('true');
               }}
             >
-              <div className={'menuItemTitle-' + `${level}`}>
+              <div
+                className={'menuItemTitle-' + `${level}`}
+                onClick={FileUtil[item?.action]}
+              >
                 {item.name}
               </div>
               <div className={'subMenuItemContainer-' + `${level}`}>
@@ -40,7 +46,7 @@ function TitleBar() {
   }
 
   useEffect(() => {
-    if (isMaximized)
+    if (!isMaximized)
       document.getElementById('root').style.borderRadius = '0px';
     else document.getElementById('root').style.borderRadius = '10px';
   }, [isMaximized]);

@@ -8,6 +8,7 @@ export const menu = [
       },
       {
         name: 'Open',
+        action: 'open_file',
       },
       {
         name: 'Save',
@@ -33,5 +34,5 @@ export const menu = [
         name: 'Paste',
       },
     ],
-  }
+  },
 ];

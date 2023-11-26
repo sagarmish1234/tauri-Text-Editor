@@ -7,11 +7,19 @@
   },
   "package": {
     "productName": "Scriptorium",
-    "version": "0.0.0"
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
       "all": false,
+      "dialog": {
+        "all": false,
+        "ask": false,
+        "confirm": false,
+        "message": false,
+        "open": true,
+        "save": false
+      },
       "window": {
         "all": true
       },
